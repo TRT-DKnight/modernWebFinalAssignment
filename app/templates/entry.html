@@ -1,0 +1,452 @@
+{# Welcome:{{ request.session.name }}#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>BetterBuy</title>
+    <link rel="stylesheet" href='{% static "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %}'>
+
+    <link href='{% static "https://fonts.googleapis.com/css?family=Questrial|Raleway:700,900" %}' rel="stylesheet">
+
+    <!-- Google font -->
+    <link href='{% static "https://fonts.googleapis.com/css?family=Montserrat:400,500,700" %}' rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'/>
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/slick.css" %}'/>
+    <link type="text/css" rel="stylesheet" href='{% static "css/slick-theme.css" %}'/>
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/nouislider.min.css" %}'/>
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href='{% static "css/font-awesome.min.css" %}'>
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    {#    <link rel="stylesheet" href={% static "css/animation.css" %}>#}
+    {#  <link typ="text/css"rel="stylesheet" href='{% static "css/login.css" %}'>#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- javascripts -->
+    <script src='{% static "js/login.js" %}'></script>
+    <!-- taplogo -->
+    <link rel="shortcut icon" href='{% static "img/logo.png" %}'/>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="content-margin">
+        <div class="head1">
+            <div class="head-content1">
+                <b>Contact Us :</b>
+                <a href="#" class="login" data rel="1"><b>1234567890</b></a>
+            </div>
+            <div class="head-content2">
+                <b>Email :</b>
+                <a href="#"><b>abcd@gmail.com</b></a>
+
+            </div>
+            <div class="head2">
+                <div class="head-content3">
+
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                        <b>Add-Card</b>
+                    </a>
+                </div>
+
+                <div class="head-content3">
+                    {{ request.session.email }}
+
+                </div>
+                <div class="head-content4">
+                    <i class="fa fa-heart-o"></i>
+                    <a href="#"><b>Wishlist</b></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better laptop display -->
+            <div class="navbar-header">
+
+                <!-- Button that toggles the navbar on and off on small screens -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                    <!-- Hides information from screen readers -->
+                    <span class="sr-only"></span>
+
+                    <!-- Draws 3 bars in navbar button when in small mode -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+                <a class="pull-left" href="#"><img src='{% static "img/logo.png" %}' alt="logo"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="mainnav">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href='/laptos'>Laptos</a></li>
+                        <li><a href='/about'>About US</a></li>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Brands <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Acer</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href='/apple'>Apple</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Dell</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Lenevo</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href='/'>Logout</a></li>
+                    </ul>
+                </div>
+                <!-- navbar-left will move the search to the left -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Define how many slides to put in the carousel -->
+        <ol class="carousel-indicators">
+            <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#theCarousel" data-slide-to="1"></li>
+            <li data-target="#theCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Define the text to place over the image -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="slide1"></div>
+                <div class="carousel-caption">
+                    <h1>Sale Sale</h1>
+                    <p>Sale</p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide2"></div>
+                <div class="carousel-caption">
+                    <h1>Sale Sale</h1>
+                    <p>Sale</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide3"></div>
+                <div class="carousel-caption">
+                    <h1>Sale Sale!</h1>
+                    <p>Sale</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Set the actions to take when the arrows are clicked -->
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"> </span>
+        </a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+<div class="Best_of_best">
+        <div class="text-center gaping">
+        </div>
+        <div class="row" style="    width: 100%;">
+            <div class="col-sm-4">
+                <div class="banner-shortcode style-3 wide">
+
+                    <div class="overlay">
+                        <div class="valign-middle-cell">
+                            <div class="valign-middle-content">
+                                <a href="#"><h3 class="h3 light">Laptops</h3></a>
+                                <img src={% static "img/1.png" %} alt="Cato">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="banner-shortcode style-3 wide">
+                    <div class="overlay">
+                        <div class="valign-middle-cell">
+                            <div class="valign-middle-content">
+                                <a href=""><h3 class="h3 light">Gaming Laptos</h3></a>
+                                <img src={% static "img/2.jpg" %} alt="Cato">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="banner-shortcode style-3 wide" style="background-image: url(img/banner.jpg);">
+                    <div class="overlay">
+
+                        <div class="valign-middle-cell">
+                            <div class="valign-middle-content">
+                                <a href=""><h3 class="h3 light">Accessories</h3></a>
+                                <img src={% static "img/3.jpeg" %} alt="Cato">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="laptop" id="laptop">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+
+                    <div class="section_title"><h2>Laptops</h2></div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+                    <img src={% static "img/laptop1.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="p#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+                    <img src={% static "img/laptop2.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+                    <img src={% static "img/laptop3.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+                    <img src={% static "img/laptop1.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><
+
+
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+
+                    <img src={% static "img/laptop2.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-6 col-md-4" style="">
+                <div class="thumbnail">
+                    <img src={% static "img/laptop1.png" %} alt="laptop">
+                    <div class="caption">
+                        <h4 class="pull-right">$24.99</h4>
+                        <h4><a href="#">1<sup>st</sup> Product</a>
+                        </h4>
+                        <p>This is a short description. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</p>
+                        <div class="ratings">
+                            <p class="pull-right"><a href="#">15 reviews</a></p>
+                            <p>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    <!-- subscribers -->
+    <div id="subscribe" class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="subscribe">
+                        <p><strong>SUBSCRIBE</strong></p>
+                        <form>
+                            <input class="input" type="email" placeholder="Enter Your Email">
+
+                            <button class="subscribe-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+                        </form>
+                        <ul class="subscribe-follow">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+
+    <!-- Footer -->
+    <style>
+        .thumbnail img {
+            height: 200px;
+        }
+
+        .valign-middle-content {
+            text-align: center;
+        }
+
+        .overlay {
+            background: whitesmoke;
+        }
+
+        .overlay img {
+            width: 335px;
+            height: 160px;
+        }
+    </style>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
